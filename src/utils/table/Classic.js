@@ -6,7 +6,7 @@ export const CHARACTERS = [
   "Amapola",
   "Orquídea",
 ];
-export const WEAPON = [
+export const WEAPONS = [
   "Candelabro",
   "Puñal",
   "Tubería de plomo",
@@ -14,7 +14,7 @@ export const WEAPON = [
   "Cuerda",
   "Herramienta",
 ];
-export const PLACE = [
+export const PLACES = [
   "Sala de baile",
   "Sala de billar",
   "Invernadero",
