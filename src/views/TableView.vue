@@ -18,16 +18,14 @@ const itemsChecked = ref(JSON.parse(window.localStorage.getItem('clue-table')) |
 
 const finalItems = JSON.parse(window.localStorage.getItem('clue-table-items'));
 
-const murderer = ref(finalItems.characters || '');
-const murderWeapon = ref(finalItems.weapons || '');
-const murderPlace = ref(finalItems.places || '');
+const murderer = ref(finalItems?.characters || '');
+const murderWeapon = ref(finalItems?.weapons || '');
+const murderPlace = ref(finalItems?.places || '');
 </script>
 
 <template>
     <main>
         <section v-if="isClassicGame">
-            <h1>Creating table {{ type }}</h1>
-
             <p class="w-full sticky top-0 left-0 p-4 text-sm bg-white shadow z-10">
                 Ha sido <Item>{{ murderer || '??' }}</Item> con <Item>{{ murderWeapon || '??' }}</Item> en <Item>{{
                     murderPlace || '??' }}
@@ -37,7 +35,7 @@ const murderPlace = ref(finalItems.places || '');
             <div class="relative overflow-x-auto">
                 <table class="table-auto w-full text-sm text-left text-gray-500 dark:text-gray-400">
                     <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-                        <tr>
+                        <tr class="text-center">
                             <th></th>
                             <th>
                                 Pistas
